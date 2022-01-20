@@ -1,5 +1,8 @@
 package com.cursojava.curso.models;
 
+import javax.persistence.Table;
+
+@Table(name = "usuarios")
 public class Usuario {
 
     private Long id;
