@@ -4,20 +4,20 @@ $(document).ready(function() {
   $('#usuarios').DataTable();
 });
 
-function cargarUsuarios(){
+async function cargarUsuarios(){
 
-(async () => {
-  const rawResponse = await fetch('https://httpbin.org/post', {
-    method: 'POST',
+
+  const request = await fetch('usuario/2343', {
+    method: 'GET',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({a: 1, b: 'Textual content'})
-  });
-  const content = await rawResponse.json();
+    }
 
-  console.log(content);
-})();
+  });
+  const usuarios = await request.json();
+
+  console.log(usuarios);
+
 
 }
