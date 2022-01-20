@@ -25,8 +25,8 @@ public class UsuarioController {
 
 
 
-    @RequestMapping(value = "usuario")
-    public List<Usuario> getUsuario(){
+    @RequestMapping(value = "usuarios")
+    public List<Usuario> getUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
         Usuario usuario = new Usuario();
         usuario.setId(234L);
